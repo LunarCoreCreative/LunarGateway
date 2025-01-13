@@ -1,0 +1,74 @@
+# ===================================================================
+# CONFIGURAÇÃO DA BÚSSOLA MÁGICA - LunarGateway
+# Este arquivo controla as configurações da bússola mágica e seu menu.
+# ===================================================================
+
+# Ativar ou desativar a funcionalidade da bússola mágica.
+enabled: true
+
+# Nome do mundo onde a bússola será entregue ao jogador ao entrar.
+# Certifique-se de que o nome do mundo está correto!
+world: "world"
+
+# Bloquear a movimentação ou drop da bússola no inventário.
+# Se true, a bússola não poderá ser movida ou descartada.
+locked: true
+
+# Slot onde a bússola será posicionada no inventário.
+# Use um número entre 0 e 35 (0 é o primeiro slot do inventário).
+# Se o valor for inválido, a bússola será adicionada ao próximo espaço vazio.
+slot: 0
+
+# Material/ícone usado para a bússola.
+# Escolha um material válido da lista de materiais do Minecraft.
+# Exemplo: COMPASS, NETHER_STAR, DIAMOND_SWORD, etc.
+icon: "NETHER_STAR"
+
+# Nome exibido na bússola.
+# Utilize códigos de cores (§) para personalizar.
+name: "§bMenu Mágico"
+
+# Descrição (lore) exibida ao passar o mouse sobre a bússola.
+# Cada item da lista será exibido em uma linha.
+lore:
+  - "§eUse esta bússola mágica para navegar pelo servidor!"
+  - "§bUm item especial fornecido pelo LunarGateway."
+
+# CONFIGURAÇÃO DO MENU DA BÚSSOLA
+menu:
+
+  enabled: true  # Define se o comando /menu está ativado
+
+  # Título do menu que será exibido ao abrir a bússola.
+  title: "§6Menu Principal Lunar"
+
+  # Tamanho do inventário do menu.
+  # Deve ser um múltiplo de 9 (9, 18, 27, 36, 45 ou 54).
+  # Caso o tamanho seja inválido, será usado o padrão 27.
+  size: 27
+
+  filler:
+    enabled: true # Ativar ou desativar o preenchimento de espaços vazios
+    material: "BLACK_STAINED_GLASS_PANE" # Material usado para preencher os espaços vazios
+    name: "§7" # Nome do item de preenchimento (deixar vazio para sem texto)
+    lore: [] # Lore do item de preenchimento (deixar vazio para sem lore)
+
+  # Itens que serão exibidos no menu.
+  # Cada item é configurado individualmente com slot, ícone, nome, lore e comando.
+  items:
+    # Item 1: Spawn do Survival Plus
+    - slot: 11                # Slot do inventário onde o item será exibido.
+      icon: "GRASS_BLOCK"   # Ícone do item. Exemplo: DIAMOND_SWORD, STONE, etc.
+      name: "§bSpawn Survival Plus"  # Nome do item no menu.
+      lore:                   # Descrição (lore) exibida ao passar o mouse no item.
+        - "§eTeleport para o Spawn do Survival Plus!"
+        - "§bExplore o mundo e inicie sua aventura!"
+      command: "mvtp %player% SpawnSurvivalPlus"  # Comando executado ao clicar no item.
+
+    # Item 2: Lobby
+    - slot: 15                # Slot do inventário onde o item será exibido.
+      icon: "ENDER_EYE"       # Ícone do item. Exemplo: ENDER_EYE, COMPASS, etc.
+      name: "§6Lobby"         # Nome do item no menu.
+      lore:                   # Descrição (lore) exibida ao passar o mouse no item.
+        - "§eVolte para o lobby principal."
+      command: "mvtp %player% world"   # Comando executado ao clicar no item.

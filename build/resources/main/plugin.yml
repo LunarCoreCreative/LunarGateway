@@ -1,0 +1,15 @@
+name: LunarGateway
+version: '1.0-SNAPSHOT'
+main: org.lunar.lunarGateway.LunarGateway
+api-version: '1.21'
+author: EthanNoward
+description: Um plugin para criar menus, definir mundos iniciais e guiar os jogadores no servidor.
+commands:
+  lunargateway:
+    description: Comando principal do LunarGateway.
+  lobby:
+    description: Teleporta o jogador para o mundo inicial configurado.
+    usage: /lobby
+  menu:
+    description: Abre o menu configurado no plugin.
+    usage: /menu

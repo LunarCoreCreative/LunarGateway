@@ -1,0 +1,34 @@
+# ===============================================================
+# CONFIGURAÇÃO DO PLUGIN LunarGateway
+# ===============================================================
+
+# CONFIGURAÇÃO DO MUNDO INICIAL
+on-join-world:
+  enabled: true  # Ativar ou desativar o teleporte automático para o mundo inicial
+  default-world: "world"  # Nome do mundo para onde os jogadores serão teleportados ao entrar no servidor
+
+# MENSAGENS PERSONALIZADAS
+messages:
+  welcome: "§aBem-vindo ao servidor!"  # Mensagem de boas-vindas enviada ao jogador ao entrar
+  compass-received: "§eVocê recebeu a bússola mágica!"  # Mensagem ao receber a bússola
+  no-world: "§cO mundo configurado não existe!"  # Mensagem caso o mundo inicial configurado não exista
+
+# CONFIGURAÇÃO DA BÚSSOLA INICIAL
+compass:
+  enabled: true  # Ativar ou desativar a funcionalidade da bússola
+  world: "world"  # Nome do mundo onde a bússola será dada ao jogador
+  locked: true    # Define se a bússola pode ser movida ou dropada no inventário
+  slot: 0         # Slot do inventário onde a bússola será colocada (0 = primeiro slot)
+  icon: "COMPASS" # Material usado como ícone da bússola (ex.: COMPASS, NETHER_STAR, etc.)
+  name: "§aMenu Principal"  # Nome da bússola exibido no inventário
+  lore:            # Lore (descrição) exibida ao passar o mouse sobre a bússola
+    - "§eUse esta bússola para acessar o menu principal!"
+    - "§bFuncionalidade mágica do LunarGateway."
+
+# CONFIGURAÇÃO DO COMANDO /LOBBY
+lobby:
+  enabled: true       # Ativar ou desativar o comando /lobby
+  world: "world"      # Nome do mundo para onde o jogador será teleportado ao usar o comando
+  message: "§aVocê foi teleportado para o lobby!" # Mensagem ao teleportar
+  no-world-message: "§cO mundo configurado para o lobby não existe!" # Mensagem se o mundo não existir
+
